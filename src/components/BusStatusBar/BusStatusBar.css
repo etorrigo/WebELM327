@@ -1,0 +1,68 @@
+.bus-status-bar {
+  background-color: #060a12;
+  border-bottom: 1px solid var(--color-obd-border);
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10.5px;
+}
+
+.bus-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #34d399;
+}
+
+.bus-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10b981;
+}
+
+.bus-dot.active {
+  box-shadow: 0 0 8px #10b981;
+  animation: pulseDot 1.8s infinite;
+}
+
+.bus-label {
+  color: #94a3b8;
+}
+
+.bus-val {
+  font-weight: 700;
+  color: #34d399;
+}
+
+.bus-divider {
+  color: #475569;
+}
+
+.ecu-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ecu-val {
+  font-weight: 700;
+  color: #22d3ee;
+}
+
+.rate-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rate-val {
+  font-weight: 600;
+  color: #7dd3fc;
+}
+
+.latency-val {
+  color: var(--color-neon-green);
+  font-size: 9px;
+}

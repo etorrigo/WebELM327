@@ -1,0 +1,193 @@
+.live-sensors-panel {
+  background-color: var(--color-obd-surface);
+  border: 1px solid var(--color-obd-border);
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-obd-border);
+  padding-bottom: 8px;
+}
+
+.panel-header-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.panel-ping-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #22d3ee;
+}
+
+.panel-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #f1f5f9;
+}
+
+.live-badge {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background-color: rgba(6, 78, 59, 0.6);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+
+.live-badge.active {
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);
+}
+
+/* Grid de Sensores */
+.sensors-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.sensor-card {
+  background-color: rgba(8, 13, 22, 0.8);
+  border: 1px solid rgba(27, 42, 68, 0.8);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.sensor-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.sensor-pid {
+  font-size: 10px;
+  color: #94a3b8;
+}
+
+.sensor-range {
+  font-size: 10px;
+}
+
+.text-cyan {
+  color: #22d3ee;
+}
+
+.sensor-card-body {
+  margin: 6px 0;
+}
+
+.sensor-value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.sensor-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-white);
+  letter-spacing: -0.03em;
+}
+
+.sensor-unit {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.sensor-status-chip {
+  margin-left: auto;
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+
+.text-emerald {
+  color: #34d399;
+  background-color: rgba(6, 78, 59, 0.4);
+}
+
+.text-sky {
+  color: #38bdf8;
+  background-color: rgba(12, 74, 110, 0.4);
+}
+
+.sensor-bar-bg {
+  width: 100%;
+  height: 5px;
+  background-color: #1e293b;
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.sensor-bar-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.rpm-gradient {
+  background: linear-gradient(90deg, #22d3ee 0%, #3b82f6 50%, #10b981 100%);
+}
+
+.bg-emerald {
+  background-color: #10b981;
+}
+
+.bg-cyan {
+  background-color: #06b6d4;
+}
+
+.bg-indigo {
+  background-color: #818cf8;
+}
+
+.bg-amber {
+  background-color: #f59e0b;
+}
+
+.sensor-hint {
+  font-size: 9px;
+  color: #94a3b8;
+}
+
+.sensor-hint-trend {
+  font-size: 9px;
+}
+
+/* Gráfico de tendência estilizado */
+.trend-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 12px;
+  margin-top: 6px;
+}
+
+.t-bar {
+  width: 5px;
+  border-radius: 1px;
+}
+
+.t-bar.b1 { height: 4px; background-color: #0284c7; }
+.t-bar.b2 { height: 6px; background-color: #0ea5e9; }
+.t-bar.b3 { height: 8px; background-color: #38bdf8; }
+.t-bar.b4 { height: 12px; background-color: #67e8f9; }
+.t-bar.b5 { height: 8px; background-color: #22d3ee; }
+.t-bar.b6 { height: 12px; background-color: #34d399; }

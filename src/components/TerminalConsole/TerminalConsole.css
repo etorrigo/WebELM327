@@ -1,0 +1,153 @@
+.terminal-console {
+  background-color: var(--color-obd-terminal);
+  border: 1px solid var(--color-obd-border);
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: var(--glow-terminal);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(27, 42, 68, 0.6);
+}
+
+.terminal-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot.red { background-color: #f43f5e; }
+.dot.yellow { background-color: #facc15; }
+.dot.green { background-color: #10b981; }
+
+.terminal-name {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #cbd5e1;
+  margin-left: 6px;
+  letter-spacing: 0.05em;
+}
+
+.terminal-rate-chip {
+  font-size: 9px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background-color: rgba(6, 78, 59, 0.7);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: var(--color-neon-green);
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.terminal-screen {
+  height: 176px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  color: #cbd5e1;
+  padding-right: 4px;
+  user-select: text;
+  scroll-behavior: smooth;
+}
+
+.terminal-line {
+  line-height: 1.4;
+  word-break: break-all;
+}
+
+.text-muted {
+  color: #64748b;
+  font-size: 10px;
+}
+
+.text-dim {
+  color: #64748b;
+}
+
+.prompt-symbol {
+  color: #22d3ee;
+}
+
+.command-text {
+  color: #22d3ee;
+}
+
+.response-text {
+  color: var(--color-text-white);
+}
+
+.detail-text {
+  color: var(--color-neon-green);
+  font-weight: 600;
+}
+
+.system-msg {
+  color: #fde047;
+}
+
+.direct-resp {
+  color: var(--color-neon-green);
+}
+
+/* Linha de input interativa */
+.terminal-input-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(27, 42, 68, 0.6);
+}
+
+.terminal-arrow {
+  color: var(--color-neon-green);
+  font-weight: 700;
+}
+
+.terminal-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--color-text-white);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 4px 6px;
+  outline: none;
+}
+
+.terminal-input::placeholder {
+  color: #475569;
+}
+
+.terminal-submit-btn {
+  padding: 4px 12px;
+  background-color: var(--color-primary-blue);
+  color: var(--color-text-white);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.terminal-submit-btn:hover {
+  background-color: #2563eb;
+}

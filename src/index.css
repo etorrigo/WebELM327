@@ -1,0 +1,108 @@
+/* Variáveis e Design Tokens Fiéis à Tela TelaELM327Main */
+:root {
+  --color-obd-bg: #080d16;
+  --color-obd-container: #0a0f1a;
+  --color-obd-header: rgba(11, 19, 34, 0.95);
+  --color-obd-surface: rgba(14, 23, 38, 0.9);
+  --color-obd-card: rgba(18, 29, 48, 0.9);
+  --color-obd-card-subtle: rgba(18, 29, 48, 0.6);
+  --color-obd-terminal: #050911;
+  --color-obd-border: #1b2a44;
+  --color-obd-border-subtle: rgba(27, 42, 68, 0.5);
+  
+  --color-neon-green: #00e676;
+  --color-neon-blue: #00b0ff;
+  --color-primary-blue: #1e88e5;
+  --color-dark-blue: #1565c0;
+  --color-text-white: #ffffff;
+  --color-text-slate: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-text-dim: #64748b;
+  --color-danger: #f43f5e;
+  --color-warning: #fbbf24;
+
+  --font-sans: 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --glow-blue: 0 4px 20px -2px rgba(30, 136, 229, 0.45);
+  --glow-cyan-card: 0 0 10px rgba(0, 176, 255, 0.2);
+  --glow-terminal: inset 0 0 25px rgba(0, 0, 0, 0.8), 0 0 12px rgba(0, 176, 255, 0.15);
+  --glow-badge-green: 0 0 10px rgba(0, 230, 118, 0.3);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-obd-bg);
+  color: var(--color-text-slate);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* Scrollbar estilizada */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-obd-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-obd-border);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neon-blue);
+}
+
+/* Container do Mobile Mockup centralizado */
+.device-container {
+  width: 100%;
+  max-width: 440px;
+  min-height: 100vh;
+  background-color: var(--color-obd-container);
+  border-left: 1px solid var(--color-obd-border-subtle);
+  border-right: 1px solid var(--color-obd-border-subtle);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Utilitários tipográficos */
+.font-mono {
+  font-family: var(--font-mono);
+}
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Animações e pulsos */
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+@keyframes pingDot {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 0.4; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.ping-anim {
+  animation: pingDot 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.pulse-anim {
+  animation: pulseDot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
